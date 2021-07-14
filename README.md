@@ -1,12 +1,12 @@
 # Detecting Deadlock in UNIX
-Your task is to design a serial userspace program that detects and crudely resolves particular types of deadlock on a UNIX system. As we know, deadlock can manifest in a variety of different ways on an operating system, in both the kernel and userland. For this assignment we will only be concerned with deadlock among userspace processes that are sharing file resources. This might sound rather restrictive at first, but as we know, many resources on UNIX machines are in fact represented as files, be they physical or virtual. Before you begin the assignment, you should have a basic understanding of deadlock and the algorithms for detecting and correcting it.
+Your task is to design a userspace program that detects and crudely resolves particular types of deadlock on a UNIX system. As we know, deadlock can manifest in a variety of different ways on an operating system, in both the kernel and userland, but for this assignment we will only be concerned with deadlock among userspace processes that are sharing mutually-exclusive file resources. This might sound rather restrictive at first, but as we know, many resources on UNIX machines are in fact represented as files, be they physical or virtual. Before you begin the assignment, you should have a basic understanding of deadlock and the algorithms for detecting and correcting it.
 
 ## Specification
 
 Your program must be written in the C programming language and it must exhibit the following behavior:
 
 0. Print a list of the userspace processes that are actively reading/writing/waiting on any locked file.
-1. Check for file-related deadlock amongst the userspace processes.
+1. Check for file-related deadlock amongst the userspace processes that are currently running.
 2. If there is no file-related deadlock amongst the userspace processes, print <tt>No deadlock.</tt> to standard out and exit. 
 3. If deadlock has been detected, print <tt>Deadlock!</tt>, and then:
 4. List each instance of deadlock on a new line and display the process names and file names involved.
@@ -22,7 +22,7 @@ If you don't know where to start, see the checkpoints below for guidelines on ho
 
 * Numerical IDs for processes and files are not the same thing as process names and file names.
 * To keep the output legible, do not print absolute paths of files, just output their local file names.
-* 
+* When going from Step 6 to Step 1, new processes might have kicked up, so we need to update the list of the userspace processes that are actively reading/writing/waiting on any locked file (just don't print this list again).
 
 ## Grading
 
