@@ -52,23 +52,19 @@ If you are concerned about losing points here, then you should meet with your in
 
 The correctness of your program will account for the majority of your grade. To ensure that you maximize this score, you should develop your code with respect to the milestones listed below.
 
-#### Checkpoint 1 (20 points) 
+#### Checkpoint 1 (30 points) 
 
 Step 1, i.e., print to standard out a list of the user space processes that are actively reading/writing/waiting on any locked file, and then exit.
 
-#### Checkpoint 2 (35 points) 
+#### Checkpoint 2 (50 points) 
 
-Next, build a data structure that represents this information in a way that will be algorithmically useful.
+Next, build a data structure that represents this information in a way that will be algorithmically useful, then perform Steps 1-4, i.e., report whether a single deadlock has occurred or not occurred, and then exit.
 
-#### Checkpoint 3 (50 points) 
-
-Steps 1-4, i.e., report whether a single deadlock has occurred or not occurred, and then exit.
-
-#### Checkpoint 4 (60 points) 
+#### Checkpoint 3 (60 points) 
 
 Steps 1-5, i.e., report whether a single deadlock has occurred or not occurred, print the process names and file names involved in that deadlock, kill any process involved in that deadlock, then repeat.
 
-#### Checkpoint 5 (70 points)
+#### Checkpoint 4 (70 points)
 
 Steps 1-7, i.e., report whether deadlock has occurred or not, and if so, list <i>many</i> ocurrences of deadlock and kill the process involved in the most ocurrences of deadlock, then repeat.
 
