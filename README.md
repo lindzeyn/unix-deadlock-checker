@@ -22,7 +22,7 @@ Once you have this information, the remainder of the assignment is algorithmic, 
 
 If you don't know where to start, see the checkpoints below for guidelines on how to incrementally write your program. Below are some miscellanious things to keep in mind while writing your program.
 
-* Numerical IDs for processes and files are not the same thing as process names and file names. While you are not responsible for translating `inode` numbers into absolute filenames, you are required to translate PIDs into process names. Again, such information lies within `/proc` virtual file-system, and there are even UNIX system administration utilities that list such information.
+* Numerical IDs for processes and files are not the same thing as process names and file names. While you are not responsible for translating `inode` numbers into absolute filenames, you are required to translate PIDs into process names. Again, such information lies within `/proc` virtual file-system, and there are even UNIX system administration commands that list such information.
 * When going from Step 7 to Step 1, new processes might have introduced, so we need to update the list of the userspace processes that are actively reading/writing/waiting on any locked file (just don't print this list again).
 
 ## Grading
