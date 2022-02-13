@@ -17,7 +17,7 @@ Your program must be written in the C programming language and it must exhibit t
 
 ## Hints
 
-This assignment requires you to obtain information about mutually-exclusive (i.e., locked) resources in use by processes that are actively running on your system. You will need to interface with the `/proc` virtual file-system to access this information, which will require a little research on your part. You do not need to worry about translating `inode` numbers into absolute filenames, but you are required to translate PIDs into process names. For the latter, some IPC might come in handy.
+This assignment requires you to obtain information about mutually-exclusive (i.e., locked) resources in use by processes that are actively running on your system. You will need to interface with the `/proc` virtual file-system to access this information, which will require a little research on your part. You do not need to worry about translating `inode` numbers into absolute filenames, but you are required to translate PIDs into process names. For the latter, some pipimg might come in handy.
 Once you have this information, the remainder of the assignment is algorithmic, so you may wish to revisit your notes on algorithms and data-structures. 
 
 If you don't know where to start, see the checkpoints below for guidelines on how to incrementally write your program. Below are some miscellanious things to keep in mind while writing your program.
