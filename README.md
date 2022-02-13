@@ -1,5 +1,5 @@
 # Detecting Deadlock in UNIX
-Your task is to design a userspace program that detects and crudely resolves particular types of deadlock on a UNIX system. As we know, deadlock can manifest in a variety of different ways on an operating system, in both the kernel and user space, but for this assignment we will only be concerned with deadlock among userspace processes that are sharing mutually-exclusive <tt>FILE</tt> resources, i.e., files that can be locked.
+Your task is to design a userspace program that detects and crudely resolves particular types of deadlock on a UNIX system. As we know, deadlock can manifest in a variety of different ways on an operating system, in both the kernel and user space, but for this assignment we will only be concerned with deadlock among user space processes that are sharing mutually-exclusive <tt>FILE</tt> resources, i.e., files that can be locked.
 
 Before you begin, you should have a basic understanding of deadlock and the algorithms for detecting and correcting it.
 
