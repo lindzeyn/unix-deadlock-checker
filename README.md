@@ -11,19 +11,18 @@ Your program must be written in the C programming language and it must exhibit t
 2. Check for file-related deadlock amongst the user space processes that are currently running.
 3. If there is no file-related deadlock amongst the user space processes, print <tt>No deadlock.</tt> to `stdout` and exit. 
 4. If deadlock has been detected, print <tt>Deadlock!</tt>, and then:
-5. List each instance of deadlock on a new line and display the process names and file names involved.
+5. List each discovered instance of deadlock on a new line and display the process names and `inode` numbers involved.
 6. Kill a process X involved in the most deadlocks and print <tt>Killed X.</tt> to the screen. 
 7. Go to 1.
 
 ## Hints
 
-This assignment requires you to obtain information about mutually-exclusive (i.e., locked) resources in use by processes that are actively running on your system. You will need to interface with the `/proc` virtual file-system to access this information, which will require a little research on your part. You do not need to worry about translating `inode` numbers into absolute filenames, but you are required to translate PIDs into process names. Again, such information lies within `/proc` virtual file-system.
+This assignment requires you to obtain information about mutually-exclusive (i.e., locked) resources in use by processes that are actively running on your system. You will need to interface with the `/proc` virtual file-system to access this information, which will require a little research on your part. 
 Once you have this information, the remainder of the assignment is algorithmic, so you may wish to revisit your notes on algorithms and data-structures. 
 
 If you don't know where to start, see the checkpoints below for guidelines on how to incrementally write your program. Below are some miscellanious things to keep in mind while writing your program.
 
-* Numerical IDs for processes and files are not the same thing as process names and file names.
-* To keep the output legible, do not print absolute paths of files, just output their local file names.
+* Numerical IDs for processes and files are not the same thing as process names and file names. While you are not responsible for translating `inode` numbers into absolute filenames, you are required to translate PIDs into process names. Again, such information lies within `/proc` virtual file-system.
 * When going from Step 7 to Step 1, new processes might have introduced, so we need to update the list of the userspace processes that are actively reading/writing/waiting on any locked file (just don't print this list again).
 
 ## Grading
@@ -54,17 +53,21 @@ The correctness of your program will account for the majority of your grade. To 
 
 #### Checkpoint 1 (30 points) 
 
-Step 1, i.e., print to `stdout` a list of the user space processes that are actively reading/writing/waiting on any locked file, and then exit.
+Step 1, i.e., print to `stdout` a list of the user space PIDs that are actively reading/writing/waiting on any locked file, and then exit.
 
-#### Checkpoint 2 (50 points) 
+#### Checkpoint 2 40 points) 
+
+Step 1, i.e., print to `stdout` a list of the user space processes names that are actively reading/writing/waiting on any locked file, and then exit.
+
+#### Checkpoint 3 (50 points) 
 
 Next, build a data structure that represents this information in a way that will be algorithmically useful, then perform Steps 1-4, i.e., report whether a single deadlock has occurred or not occurred, and then exit.
 
-#### Checkpoint 3 (60 points) 
+#### Checkpoint 4 (60 points) 
 
 Steps 1-5, i.e., report whether a single deadlock has occurred or not occurred, print the process names and file names involved in that deadlock, kill any process involved in that deadlock, then repeat.
 
-#### Checkpoint 4 (70 points)
+#### Checkpoint 5 (70 points)
 
 Steps 1-7, i.e., report whether deadlock has occurred or not, and if so, list <i>many</i> ocurrences of deadlock and kill the process involved in the most ocurrences of deadlock, then repeat.
 
