@@ -7,13 +7,13 @@ Before you begin, you should have a basic understanding of deadlock and the algo
 
 Your program must be written in the C programming language and it must exhibit the following behavior:
 
-0. Print a list of the userspace processes that are actively reading/writing/waiting on any locked file.
-1. Check for file-related deadlock amongst the userspace processes that are currently running.
-2. If there is no file-related deadlock amongst the userspace processes, print <tt>No deadlock.</tt> to standard out and exit. 
-3. If deadlock has been detected, print <tt>Deadlock!</tt>, and then:
-4. List each instance of deadlock on a new line and display the process names and file names involved.
-5. Kill the process X involved in the most deadlocks and print <tt>Killed X.</tt> to the screen. 
-6. Go to 1.
+1. Print a list of the userspace processes that are actively reading/writing/waiting on any locked file.
+2. Check for file-related deadlock amongst the userspace processes that are currently running.
+3. If there is no file-related deadlock amongst the userspace processes, print <tt>No deadlock.</tt> to standard out and exit. 
+4. If deadlock has been detected, print <tt>Deadlock!</tt>, and then:
+5. List each instance of deadlock on a new line and display the process names and file names involved.
+6. Kill a process X involved in the most deadlocks and print <tt>Killed X.</tt> to the screen. 
+7. Go to 1.
 
 ## Hints
 
@@ -24,11 +24,11 @@ If you don't know where to start, see the checkpoints below for guidelines on ho
 
 * Numerical IDs for processes and files are not the same thing as process names and file names.
 * To keep the output legible, do not print absolute paths of files, just output their local file names.
-* When going from Step 6 to Step 1, new processes might have kicked up, so we need to update the list of the userspace processes that are actively reading/writing/waiting on any locked file (just don't print this list again).
+* When going from Step 7 to Step 1, new processes might have introduced, so we need to update the list of the userspace processes that are actively reading/writing/waiting on any locked file (just don't print this list again).
 
 ## Grading
 
-If your program does not compile or produce an executable called <tt>ddeadlock</tt> after running <tt>make</tt> on the provided <tt>Makefile</tt>, then you will receive a zero. You will be deducted 1 point per <tt>gcc</tt> warning, so do not throw flags to suppress warnings. Below is a detailed rundown of how you will be evaluated on this assignment.
+If your program does not compile or produce an executable called <tt>ddeadlock</tt> after running <tt>make</tt> on the provided <tt>Makefile</tt>, then you will receive at most a 30. You will be deducted 1 point per <tt>gcc</tt> warning, so do not throw flags to suppress warnings. Below is a detailed rundown of how you will be evaluated on this assignment.
 
 ### Documentation & Style (10 points)
 
@@ -54,25 +54,22 @@ The correctness of your program will account for the majority of your grade. To 
 
 #### Checkpoint 1 (20 points) 
 
-Step 0, i.e., print to standard out a list of the userspace processes that are actively reading/writing/waiting on any locked file, and then exit.
+Step 1, i.e., print to standard out a list of the userspace processes that are actively reading/writing/waiting on any locked file, and then exit.
 
 #### Checkpoint 2 (35 points) 
 
-From Step 0, build a data-structure that represents this information in a way that will be algorithmically useful.
+From Step 1, build a data-structure that represents this information in a way that will be algorithmically useful.
 
 #### Checkpoint 3 (50 points) 
 
-Steps 0-3, i.e., report whether a single deadlock has occurred or not occurred, and then exit.
+Steps 1-4, i.e., report whether a single deadlock has occurred or not occurred, and then exit.
 
 #### Checkpoint 4 (60 points) 
 
-Steps 0-4, i.e., report whether a single deadlock has occurred or not occurred, print the process names and file names involved in that deadlock, kill any process involved in that deadlock, then repeat.
+Steps 1-5, i.e., report whether a single deadlock has occurred or not occurred, print the process names and file names involved in that deadlock, kill any process involved in that deadlock, then repeat.
 
 #### Checkpoint 5 (70 points)
 
-Steps 0-6, i.e., report whether deadlock has occurred or not, and if so, list <i>many</i> ocurrences of deadlock and kill the process involved in the most ocurrences of deadlock, then repeat.
+Steps 1-7, i.e., report whether deadlock has occurred or not, and if so, list <i>many</i> ocurrences of deadlock and kill the process involved in the most ocurrences of deadlock, then repeat.
 
 In principle, if you complete all 5 checkpoints, then you will earn full points; however, if any bugs in your code made apparent by the test cases
-
-
-Finally, as always, you should focus on writing <i>correct</i> code first before you start making your code more efficient. 
