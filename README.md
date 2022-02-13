@@ -68,4 +68,4 @@ Steps 1-5, i.e., report whether a single deadlock has occurred or not occurred, 
 
 Steps 1-7, i.e., report whether deadlock has occurred or not, and if so, list <i>many</i> ocurrences of deadlock and kill the process involved in the most ocurrences of deadlock, then repeat.
 
-In principle, if you complete all 5 checkpoints, then you will earn full points; however, if any bugs in your code made apparent by the test cases
+In principle, if you complete all 5 checkpoints, then you will earn the full 70 points for correctness; however, if any bugs in your code are made apparent by the test cases, then partial credit will be awarded.
