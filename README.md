@@ -58,7 +58,7 @@ Step 1, i.e., print to standard out a list of the user space processes that are 
 
 #### Checkpoint 2 (35 points) 
 
-From Step 1, build a data-structure that represents this information in a way that will be algorithmically useful.
+Next, build a data-structure that represents this information in a way that will be algorithmically useful.
 
 #### Checkpoint 3 (50 points) 
 
