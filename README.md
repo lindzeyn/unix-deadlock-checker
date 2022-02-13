@@ -7,9 +7,9 @@ Before you begin, you should have a basic understanding of deadlock and the algo
 
 Your program must be written in the C programming language and it must exhibit the following behavior:
 
-1. Print a list of the userspace processes that are actively reading/writing/waiting on any locked file.
-2. Check for file-related deadlock amongst the userspace processes that are currently running.
-3. If there is no file-related deadlock amongst the userspace processes, print <tt>No deadlock.</tt> to standard out and exit. 
+1. Print a list of the user space processes that are actively reading/writing/waiting on any locked file.
+2. Check for file-related deadlock amongst the user space processes that are currently running.
+3. If there is no file-related deadlock amongst the user space processes, print <tt>No deadlock.</tt> to standard out and exit. 
 4. If deadlock has been detected, print <tt>Deadlock!</tt>, and then:
 5. List each instance of deadlock on a new line and display the process names and file names involved.
 6. Kill a process X involved in the most deadlocks and print <tt>Killed X.</tt> to the screen. 
