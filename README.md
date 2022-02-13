@@ -55,9 +55,9 @@ The correctness of your program will account for the majority of your grade. To 
 
 Step 1, i.e., print to `stdout` a list of the user space PIDs that are actively reading/writing/waiting on any locked file, and then exit.
 
-#### Checkpoint 2 40 points) 
+#### Checkpoint 2 (40 points) 
 
-Step 1, i.e., print to `stdout` a list of the user space processes names that are actively reading/writing/waiting on any locked file, and then exit.
+Step 1, i.e., print to `stdout` a list of the user space *processes names* that are actively reading/writing/waiting on any locked file, and then exit.
 
 #### Checkpoint 3 (50 points) 
 
