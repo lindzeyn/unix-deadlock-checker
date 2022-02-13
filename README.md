@@ -23,7 +23,8 @@ Once you have this information, the remainder of the assignment is algorithmic, 
 If you don't know where to start, see the checkpoints below for guidelines on how to incrementally write your program. Below are some miscellanious things to keep in mind while writing your program.
 
 * Numerical IDs for processes and files are not the same thing as process names and file names. While you are not responsible for translating `inode` numbers into absolute filenames, you are required to translate PIDs into process names. Again, such information lies within `/proc` virtual file-system, and there are even UNIX system administration commands that list such information.
-* When going from Step 7 to Step 1, new processes might have introduced, so we need to update the list of the userspace processes that are actively reading/writing/waiting on any locked file (just don't print this list again).
+* Note that there may be many instances of deadlock; however, you are not required to find *all* instances, as this is computationally infeasible. Rather, your code should just have the ability to discover multiple instances of deadlock should it arise. Notice that the more instances of deadlock that we can find, the better our heuristic of killing a process X involved in the most deadlocks is.   
+* When going from Step 7 to Step 1, new processes might have introduced, so we need to update the list of the user space processes that are actively reading/writing/waiting on any locked file (just don't print this list again).
 
 ## Grading
 
@@ -65,7 +66,7 @@ Next, build a data structure that represents this information in a way that will
 
 #### Checkpoint 4 (60 points) 
 
-Steps 1-5, i.e., report whether a single deadlock has occurred or not occurred, print the process names and file names involved in that deadlock, kill any process involved in that deadlock, then repeat.
+Steps 1-5, i.e., report whether a single deadlock has occurred or not occurred, print the process names and `inodes` involved in that deadlock, kill any process involved in that deadlock, then repeat.
 
 #### Checkpoint 5 (70 points)
 
