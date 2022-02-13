@@ -62,11 +62,11 @@ Step 1, i.e., print to `stdout` a list of the user space *processes names* that 
 
 #### Checkpoint 3 (50 points) 
 
-Next, build a data structure that represents this information in a way that will be algorithmically useful, then perform Steps 1-4, i.e., report whether a single deadlock has occurred or not occurred, and then exit.
+Steps 1-4, i.e., report whether a single deadlock has occurred or not occurred, and then exit.
 
 #### Checkpoint 4 (60 points) 
 
-Steps 1-5, i.e., report whether a single deadlock has occurred or not occurred, print the process names and `inodes` involved in that deadlock, kill any process involved in that deadlock, then repeat.
+Steps 1-6, i.e., report whether a single deadlock has occurred or not occurred, print the process names and `inodes` involved in that deadlock, kill any process involved in that deadlock, then repeat.
 
 #### Checkpoint 5 (70 points)
 
