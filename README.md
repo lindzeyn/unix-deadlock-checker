@@ -17,7 +17,7 @@ Your program must be written in the C programming language and it must exhibit t
 
 ## Hints
 
-This assignment requires you to obtain information about mutually-exclusive (i.e., locked) resources in use by processes that are actively running on your system. You will need to interface with the <tt>/proc</tt> virtual file-system to access this information, which will require a little research on your part. 
+This assignment requires you to obtain information about mutually-exclusive (i.e., locked) resources in use by processes that are actively running on your system. You will need to interface with the `/proc` virtual file-system to access this information, which will require a little research on your part. 
 Once you have this information, the remainder of the assignment is algorithmic, so you may wish to revisit your notes on algorithms and data-structures. 
 
 If you don't know where to start, see the checkpoints below for guidelines on how to incrementally write your program. Below are some miscellanious things to keep in mind while writing your program.
@@ -28,7 +28,7 @@ If you don't know where to start, see the checkpoints below for guidelines on ho
 
 ## Grading
 
-If your program does not compile or produce an executable called <tt>ddeadlock</tt> after running <tt>make</tt> on the provided <tt>Makefile</tt>, then you will receive at most a 30. You will be deducted 1 point per <tt>gcc</tt> warning, so do not throw flags to suppress warnings. Below is a detailed rundown of how you will be evaluated on this assignment.
+If your program does not compile or produce an executable called `ddeadlock` after running `make` on the provided `Makefile`, then you will receive at most a 30. You will be deducted 1 point per `gcc` warning, so do not throw flags to suppress warnings. Below is a detailed rundown of how you will be evaluated on this assignment.
 
 ### Documentation & Style (10 points)
 
@@ -54,7 +54,7 @@ The correctness of your program will account for the majority of your grade. To 
 
 #### Checkpoint 1 (20 points) 
 
-Step 1, i.e., print to standard out a list of the userspace processes that are actively reading/writing/waiting on any locked file, and then exit.
+Step 1, i.e., print to standard out a list of the user space processes that are actively reading/writing/waiting on any locked file, and then exit.
 
 #### Checkpoint 2 (35 points) 
 
